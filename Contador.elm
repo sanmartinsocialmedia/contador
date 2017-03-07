@@ -1,6 +1,7 @@
 module Main exposing (..)
 
 import Html exposing (..)
+import Html.Events exposing (..)
 
 
 main =
@@ -21,9 +22,9 @@ modelo =
 
 vista modelo =
     div []
-        [ button [] [ text "-" ]
+        [ button [ onClick Decrementar ] [ text "-" ]
         , text (toString modelo)
-        , button [] [ text "+" ]
+        , button [ onClick Incrementar ] [ text "+" ]
         ]
 
 
